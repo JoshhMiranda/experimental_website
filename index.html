@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Memories 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(180deg, #fff0f3, #ffe5ec);
+      color: #333;
+    }
+
+    .intro {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .intro h1 {
+      font-size: 40px;
+      color: #ff4d6d;
+    }
+
+    .timeline {
+      width: 90%;
+      max-width: 700px;
+      margin: auto;
+      padding-bottom: 100px;
+    }
+
+    .memory {
+      margin: 120px 0;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.8s ease;
+    }
+
+    .memory.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .memory img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .caption {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 18px;
+      color: #ff4d6d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Section -->
+  <section class="intro">
+    <h1>
+      Hey babe, I know you're not big into Valentines day, but I wanted to make you something special 💕<br><br>
+      Scroll down for a sur-prise ↓
+    </h1>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline">
+
+    <div class="memory">
+      <img src="img9.jpeg" />
+      <div class="caption">Our first "date" after becoming official, I still treasure this day! 💫</div>
+    </div>
+
+    <div class="memory">
+      <img src="img1.jpeg" />
+      <div class="caption">Doing the one activity that brought us together 🥰</div>
+    </div>
+
+    <div class="memory">
+      <img src="img10.jpeg" />
+      <div class="caption">Us, being us ❤️</div>
+    </div>
+
+    <div class="memory">
+      <img src="img5.jpeg" />
+      <div class="caption">You being you 😜</div>
+    </div>
+	
+    <div class="memory">
+      <img src="img6.jpeg" />
+      <div class="caption">CHIMKIM 🍗</div>
+    </div>
+	
+    <div class="memory">
+      <img src="img14.jpeg" />
+      <div class="caption">One of our favorite days!</div>
+    </div>
+	
+    <div class="memory">
+      <img src="img16.jpeg" />
+      <div class="caption">Our first concert together 🎉🎉</div>
+    </div>
+	
+    <div class="memory">
+      <img src="img17.jpeg" />
+      <div class="caption">You deserve all the flowers in the world!</div>
+    </div>
+	
+    <div class="memory">
+      <img src="img13.jpeg" />
+      <div class="caption">and soo soo soo much more!</div>
+    </div>
+
+    <div class="memory">
+      <img src="img15.jpeg" />
+      <div class="caption"> Had to add this one in 😍</div>
+    </div>
+	
+    <div class="memory">
+      <img src="img20.jpg" />
+      <div class="caption"> How I see you 🐈😻😼</div>
+    </div>
+	
+    <div class="memory">
+      <img src="img11.jpeg" />
+      <div class="caption"> Thanks for making my life special ❤️❤️</div>
+    </div>	
+	
+    <div class="memory">
+      <img src="img3.jpeg" />
+      <div class="caption"> HAPPY VALENTINES DAY BABY!! ❤️❤️</div>
+    </div>	
+	
+  </section>
+
+  <footer>
+   I wake up everyday counting my blessing because I have you in my life. Thanks for being there when things were good, bad and everything in between. We've come far,
+   and we will go even further, together.
+  </footer>
+
+  <script>
+    const memories = document.querySelectorAll(".memory");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    memories.forEach(memory => observer.observe(memory));
+  </script>
+
+</body>
+</html>
